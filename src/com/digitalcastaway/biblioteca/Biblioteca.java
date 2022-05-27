@@ -10,6 +10,7 @@ public class Biblioteca {
 
     public Biblioteca(String name) {
         this.name = name;
+                                                    //esto esta bien
         this.catalogoLibros = new ArrayList<String>(Arrays.stream(Catalogo.libros).toList());
     }
 
