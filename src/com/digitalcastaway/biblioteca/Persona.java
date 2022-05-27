@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Persona extends Usuario {
     private String nombre;
-    private ArrayList<String> librosPrestados;
+    //cambiar a public
+    public ArrayList<String> librosPrestados;
 
     public Persona(String nombre) {
         this.nombre = nombre;
@@ -34,7 +35,8 @@ public class Persona extends Usuario {
     }
 
     public String obtenerTituloLibro(int posicion) {
-        return librosPrestados.get(posicion);
+        String libro = librosPrestados.get(posicion);
+        return libro;
     }
 
     @Override
@@ -47,6 +49,6 @@ public class Persona extends Usuario {
             output += contador + " --> " + titulo + "\n";
             contador ++;
         }
-
+        return output; //faltaba el return
     }
 }

@@ -34,10 +34,11 @@ public class Main {
                     biblio.showCatalog();
                     break;
                 case"2":
-                    System.out.println("Seleccione uno de los libros");
                     biblio.showCatalog();
+                    System.out.println("Seleccione uno de los libros");
                     int posicion = sc.nextInt();
                     usuario.obtenerLibro(posicion, biblio);
+                    usuario.obtenerTituloLibro(posicion);
                     break;
                 case "3":
                     System.out.println("Obteniendo libro aleatorio");
@@ -51,8 +52,7 @@ public class Main {
                 case"5":
                     System.out.println("Introduzca el título del libro que quiere devolver");
                     System.out.println(usuario);
-                    int libroParaDevolver = sc.nextInt();
-                    String tituloLibro = usuario.obtenerTituloLibro(libroParaDevolver);
+                    String tituloLibro = sc.next();
                     usuario.devolverLibro(tituloLibro, biblio);
                     break;
                 case "Q":
