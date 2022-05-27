@@ -38,7 +38,6 @@ public class Main {
                     System.out.println("Seleccione uno de los libros");
                     int posicion = sc.nextInt();
                     usuario.obtenerLibro(posicion, biblio);
-                    usuario.obtenerTituloLibro(posicion);
                     break;
                 case "3":
                     System.out.println("Obteniendo libro aleatorio");
